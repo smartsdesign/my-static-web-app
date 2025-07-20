@@ -35,6 +35,10 @@ jobs:
           anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
           # Or use OAuth token instead:
           # claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          direct_prompt: |
+            Please review this pull request and look for bugs and security issues.
+            Only report on bugs and potential vulnerabilities you find. Be concise.
+          #Optional: Customise review based on file types
           timeout_minutes: "60"
           # Optional: Restrict network access to specific domains only
           # experimental_allowed_domains: |
